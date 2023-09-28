@@ -17,16 +17,7 @@ namespace Trips.Data
       }
     }
 
-    public Trip GetTripById(int tripId)
-    {
-      var trip = Data.Trips.FirstOrDefault(n => n.Id == tripId);
-      if (trip != null)
-      {
-        return trip;
-
-      }
-      return null;
-    }
+    public Trip GetTripById(int tripId) => Data.Trips.FirstOrDefault(n => n.Id == tripId);
 
     public List<Trip> GetTrips() => Data.Trips.ToList();
 
